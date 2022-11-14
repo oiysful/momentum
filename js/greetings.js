@@ -7,6 +7,8 @@ const USERNAME_KEY = "username";
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
+const message = getMessage();
+
 function onLoginSubmit(event) {
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
@@ -15,8 +17,26 @@ function onLoginSubmit(event) {
     paintGreetings(username);
 }
 
+function getMessage() {
+    const date = new Date();
+    const hours = date.getHours();
+    //morning : 05 ~ 12
+    //afternoon : 12 ~ 18
+    //evening : 18 ~ 22
+    //night : 22 ~ 05
+    if(hours >= 5 && hours < 12) {
+        return "Good Morning!";
+    } else if(hours >= 12 && hours < 18) {
+        return "Good Afternoon!";
+    } else if(hours >= 18 && hours < 22) {
+        return "Good Evening.";
+    } else if(hours >= 22 || hours < 5) {
+        return "Good Night.";
+    }
+}
+
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`;
+    greeting.innerText = `${message} ${username}.`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
@@ -26,3 +46,10 @@ if(savedUsername === null) {
 } else {
     paintGreetings(savedUsername);
 }
+
+const logoutBtn = document.getElementById("logout");
+
+logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem(USERNAME_KEY);
+    location.reload();
+});

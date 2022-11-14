@@ -7,20 +7,23 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/clock.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/greeting.css">
     <title>Momentum App</title>
 </head>
 <body>
+    <button id="logout">log out</button>
+
     <h1 id="clock">00:00:00</h1>
 
     <form id="login-form" class="hidden">
         <input required maxlength="15" type="text" placeholder="Hello, What is your name?" />
-        <input type="submit" value="Continue  >" />
+        <input id="continue-btn" type="submit" value="Continue  >" />
     </form>
 
     <h1 id="greeting" class="hidden"></h1>
 
     <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter." required/>
+        <input type="text" placeholder="make your to-do list." required/>
     </form>
 
     <ul id="todo-list"></ul>
