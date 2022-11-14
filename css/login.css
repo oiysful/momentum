@@ -1,0 +1,56 @@
+#login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 95%);
+}
+
+#login-form :first-child {
+    display: block;
+    text-align: center;
+    width: 25vw;
+    height: 3vw;
+    font-size: 2vw;
+    color: rgba(245, 245, 245, 0.8);;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid rgba(245, 245, 245, 0.8);
+    outline-style: none;
+    text-shadow: 1px 1px 10px rgb(32, 32, 32);
+}
+
+#login-form :first-child::placeholder {
+    text-align: center;
+    color: rgba(245, 245, 245, 0.8);
+}
+
+#login-form :first-child::focus {
+    background-color: transparent;
+}
+
+#login-form :first-child:focus::placeholder {
+    color: transparent;
+    text-shadow: none;
+}
+
+#login-form :last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 160%);
+    text-align: center;
+    width: 7vw;
+    height: 2vw;
+    font-size: 1vw;
+    color: rgba(245, 245, 245, 0.8);
+    background-color: transparent;
+    border: 2px solid rgba(245, 245, 245, 0.8);
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+#login-form :last-child:hover {
+    background-color: rgba(245, 245, 245, 0.4);
+}
