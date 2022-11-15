@@ -49,10 +49,3 @@ if(savedUsername === null) {
     paintGreetings(savedUsername);
     paintTodoContainer();
 }
-
-const logoutBtn = document.getElementById("logout");
-
-logoutBtn.addEventListener("click", () => {
-    localStorage.removeItem(USERNAME_KEY);
-    location.reload();
-});

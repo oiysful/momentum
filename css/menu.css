@@ -10,6 +10,13 @@
     transition: all 500ms;
 }
 
+.expand-menu {
+    width: 12vw;
+    height: 15%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
 #hamburger {
     position: absolute;
     top: 50%;
@@ -18,13 +25,8 @@
     width: 1.8vw;
     height: 1.5px;
     background-color: whitesmoke;
-}
-
-#menu:hover {
-    width: 12vw;
-    height: 30%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    animation-fill-mode: forwards;
+    z-index: -1;
 }
 
 #hidden-menu {
@@ -37,6 +39,7 @@
     color: whitesmoke;
     list-style: none;
     font-size: smaller;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transition: all 500ms;
 }
