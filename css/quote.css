@@ -1,0 +1,28 @@
+#quote {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45vw;
+    color: whitesmoke;
+    font: "consolas";
+}
+
+#quote :first-child {
+    flex: 3 1 0;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 10px rgb(32, 32, 32);
+    font: italic bolder medium "Helvetica Neue", sans-serif;
+}
+
+#quote :last-child {
+    flex: 1 1 0;
+    border-top: 1px solid whitesmoke;
+    padding-top: 5px;
+    font: normal smaller "helvetica Neue", sans-serif;
+}

@@ -20,13 +20,18 @@ function deleteTodo(event) {
 function paintTodo(newTodoObj) {
     const li = document.createElement("li");
     li.id = newTodoObj.id;
+    li.style.display = "flex";
+
     const span = document.createElement("span");
     span.innerText = newTodoObj.text;
+
     const button = document.createElement("button");
     button.innerText = "❌";
-    button.addEventListener("click", deleteTodo)
+    button.addEventListener("click", deleteTodo);
+
     li.appendChild(span);
     li.appendChild(button);
+
     todoList.appendChild(li);
 }
 
@@ -47,7 +52,7 @@ todoForm.addEventListener("submit", handleTodoSubmit);
 
 const savedTodos = localStorage.getItem(TODOS_KEY);
 
-if(savedTodos !== null) {
+if (savedTodos !== null) {
     const parsedTodos = JSON.parse(savedTodos);
     todos = parsedTodos;
     parsedTodos.forEach(paintTodo);

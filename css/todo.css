@@ -1,0 +1,51 @@
+#todo-container {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-110%, -100%);
+}
+
+#todo-form :first-child {
+    text-align: center;
+    width: 16vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    color: rgba(245, 245, 245, 0.8);
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.5px solid rgba(245, 245, 245, 0.8);
+    text-shadow: 1px 1px 10px rgb(32, 32, 32);
+    outline-style: none;
+    caret-color: rgba(245, 245, 245, 0.8);
+}
+
+#todo-form :first-child::placeholder {
+    color: rgba(245, 245, 245, 0.8);
+}
+
+#todo-form :first-child:focus::placeholder {
+    color: transparent;
+    text-shadow: none;
+}
+
+#todo-list {
+    color: rgba(245, 245, 245, 0.8);
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li input {
+    flex: 1 1 0;
+}
+
+#todo-list li span {
+    flex: 6 1 0;
+    text-shadow: 1px 1px 10px rgb(32, 32, 32);
+}
+
+#todo-list li button {
+    flex: 0.5 1 0;
+    padding: 0;
+}
