@@ -2,9 +2,7 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = loginForm.querySelector("input");
 const greeting = document.querySelector("#greeting");
 const todoContainer = document.querySelector("#todo-container");
-
-const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username";
+const menu = document.getElementById("menu");
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
@@ -40,11 +38,13 @@ function paintGreetings(username) {
 
 function paintTodoContainer() {
     todoContainer.classList.remove(HIDDEN_CLASSNAME);
+    menu.classList.remove(HIDDEN_CLASSNAME);
 }
 
 if(savedUsername === null) {
+    menu.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.remove(HIDDEN_CLASSNAME);
-    loginForm.addEventListener("submit", onLoginSubmit);
+    loginForm.addEventListener(COMMON_EVENTS.SUBMIT, onLoginSubmit);
 } else {
     paintGreetings(savedUsername);
     paintTodoContainer();

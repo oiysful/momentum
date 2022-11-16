@@ -2,7 +2,7 @@
     position: absolute;
     top: 100%;
     left: 100%;
-    transform: translate(-110%, -100%);
+    transform: translate(-120%, -110%);
 }
 
 #todo-form :first-child {

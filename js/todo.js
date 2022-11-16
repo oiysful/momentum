@@ -2,8 +2,6 @@ const todoForm = document.getElementById("todo-form");
 const todoInput = todoForm.querySelector("input");
 const todoList = document.getElementById("todo-list");
 
-const TODOS_KEY = "todos";
-
 let todos = [];
 
 function saveTodos() {
@@ -27,7 +25,7 @@ function paintTodo(newTodoObj) {
 
     const button = document.createElement("button");
     button.innerText = "❌";
-    button.addEventListener("click", deleteTodo);
+    button.addEventListener(COMMON_EVENTS.CLICK, deleteTodo);
 
     li.appendChild(span);
     li.appendChild(button);
@@ -48,7 +46,7 @@ function handleTodoSubmit(event) {
     saveTodos();
 }
 
-todoForm.addEventListener("submit", handleTodoSubmit);
+todoForm.addEventListener(COMMON_EVENTS.SUBMIT, handleTodoSubmit);
 
 const savedTodos = localStorage.getItem(TODOS_KEY);
 
