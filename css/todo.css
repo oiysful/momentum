@@ -20,7 +20,9 @@
     outline-style: none;
     caret-color: rgba(245, 245, 245, 0.8);
 }
-
+#todo-form :first-child:focus {
+    color: whitesmoke;
+}
 #todo-form :first-child::placeholder {
     color: rgba(245, 245, 245, 0.8);
 }
@@ -34,6 +36,8 @@
     color: rgba(245, 245, 245, 0.8);
     list-style: none;
     padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 #todo-list li input {
@@ -43,9 +47,15 @@
 #todo-list li span {
     flex: 6 1 0;
     text-shadow: 1px 1px 10px rgb(32, 32, 32);
+    z-index: 1000;
 }
 
 #todo-list li button {
     flex: 0.5 1 0;
     padding: 0;
+    background-color: transparent;
+    border: 0;
+    color: whitesmoke;
+    text-shadow: 1px 1px 10px rgb(32, 32, 32);
+    cursor: pointer;
 }

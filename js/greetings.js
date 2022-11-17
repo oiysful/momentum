@@ -42,7 +42,6 @@ function paintTodoContainer() {
 }
 
 if(savedUsername === null) {
-    menu.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener(COMMON_EVENTS.SUBMIT, onLoginSubmit);
 } else {

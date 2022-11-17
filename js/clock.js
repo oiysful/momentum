@@ -10,3 +10,5 @@ function getClock() {
 
 getClock();
 setInterval(getClock, 333);
+
+clock.classList.remove(HIDDEN_CLASSNAME);

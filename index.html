@@ -14,7 +14,7 @@
     <title>Momentum App</title>
 </head>
 <body>
-    <div class="hidden" id="menu">
+    <div id="menu" class="hidden">
         <span id="hamburger"></span>
         <ul id="hidden-menu" class="hidden">
             <li id="logout">Log out</li>
@@ -22,12 +22,12 @@
             <li id="change-bg">Change background</li>
         </ul>
         <form id="edit-name-form" class="hidden">
-            <input type="text" id="edit-name-input" maxlength="15" placeholder="New user name">
-            <input type="submit" id="edit-name-submit" class="hidden">
+            <input type="text" id="edit-name-input" maxlength="15" placeholder="New user name" autofocus>
+            <input type="submit" id="edit-name-submit">
         </form>
     </div>
 
-    <h1 id="clock"></h1>
+    <h1 id="clock" class="hidden"></h1>
 
     <form id="login-form" class="hidden">
         <input required maxlength="15" type="text" placeholder="Hello, What is your name?" />
@@ -43,7 +43,7 @@
         <ul id="todo-list"></ul>
     </div>
 
-    <div id="quote">
+    <div id="quote" class="hidden">
         <span></span>
         <span></span>
     </div>
