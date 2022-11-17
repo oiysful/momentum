@@ -1,7 +1,6 @@
 const todoForm = document.getElementById("todo-form");
 const todoInput = todoForm.querySelector("input");
 const todoList = document.getElementById("todo-list");
-const todoItems = todoList.querySelectorAll("li");
 
 let todos = [];
 
@@ -19,7 +18,6 @@ function deleteTodo(event) {
 function paintTodo(newTodoObj) {
     const li = document.createElement("li");
     li.id = newTodoObj.id;
-    li.style.display = "flex";
 
     const span = document.createElement("span");
     span.innerText = newTodoObj.text;
@@ -56,3 +54,9 @@ if (savedTodos !== null) {
     todos = parsedTodos;
     parsedTodos.forEach(paintTodo);
 }
+
+const chkBox = document.createElement("input");
+chkBox.type = "checkbox";
+
+const todoItems = todoList.childNodes;
+todoItems.forEach(item => console.log(item));

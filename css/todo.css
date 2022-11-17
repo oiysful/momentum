@@ -2,14 +2,14 @@
     position: absolute;
     top: 100%;
     left: 100%;
-    transform: translate(-120%, -110%);
+    transform: translate(-110%, -110%);
 }
 
 #todo-form :first-child {
     text-align: center;
-    width: 16vw;
-    height: 2vw;
-    font-size: 1.5vw;
+    width: 12em;
+    height: 2em;
+    font-size: 1.5em;
     color: rgba(245, 245, 245, 0.8);
     background-color: transparent;
     border-top: none;
@@ -40,8 +40,9 @@
     margin-bottom: 0.5em;
 }
 
-#todo-list li input {
-    flex: 1 1 0;
+#todo-list li {
+    display: flex;
+    margin-top: 0.6em;
 }
 
 #todo-list li span {
@@ -51,7 +52,7 @@
 }
 
 #todo-list li button {
-    flex: 0.5 1 0;
+    flex: 1 1 0;
     padding: 0;
     background-color: transparent;
     border: 0;

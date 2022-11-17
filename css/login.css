@@ -10,9 +10,10 @@
 #login-form :first-child {
     display: block;
     text-align: center;
-    width: 25vw;
-    height: 3.5vw;
-    font-size: 2vw;
+    width: 12linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))em;
+    height: 1em;
+    padding-bottom: 0.3em;
+    font-size: 3em;
     color: rgba(245, 245, 245, 0.8);
     background-color: transparent;
     border-top: none;
@@ -39,10 +40,10 @@
     left: 50%;
     transform: translate(-50%, 150%);
     text-align: center;
-    width: 8vw;
-    height: 2vw;
-    font-size: 1vw;
-    color: rgba(245, 245, 245, 0.8);
+    width: 8em;
+    height: 2em;
+    font-size: 1em;
+    color: rgba(205, 205, 205, 0.8);
     background-color: transparent;
     border: 2px solid rgba(245, 245, 245, 0.8);
     border-radius: 50px;

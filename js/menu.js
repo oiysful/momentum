@@ -13,7 +13,6 @@ const changeBgBtn = document.getElementById("change-bg");
 function expandMenu() {
     menuBtn.style.width = "12em";
     menuBtn.style.height = "8em";
-    menuBtn.style.boxShadow = "1px 1px 5px rgb(32, 32, 32)";
 
     hamburger.style.width = "12em";
     hamburger.style.height = "8em";
@@ -41,7 +40,7 @@ function collapseMenu() {
 
 function menuItemMouseOn(item) {
     const keyframe = item.type === COMMON_EVENTS.MOUSE_ENTER ? ["transparent", "rgba(245, 245, 245, 0.4)"]
-                                                             : ["rgba(245, 245, 245, 0.4)", "transparent"];
+                                                             : ["rgba(205, 205, 205, 0.4)", "transparent"];
 
     const selected = document.getElementById(item.target.id);
     selected.animate(
