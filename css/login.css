@@ -2,7 +2,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, 200%);
     /* opacity: 0;
     visibility: hidden; */
 }
@@ -13,7 +13,7 @@
     width: 12linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))em;
     height: 1em;
     padding-bottom: 0.3em;
-    font-size: 3em;
+    font-size: 2.5em;
     color: rgba(245, 245, 245, 0.8);
     background-color: transparent;
     border-top: none;
