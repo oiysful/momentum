@@ -38,6 +38,17 @@
     padding: 0;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    max-height: 18em;
+    overflow-y: scroll;
+}
+
+#todo-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+#todo-list::-webkit-scrollbar-thumb {
+    background: rgba(245, 245, 245, 0.4);
+    border-radius: 15px;
 }
 
 #todo-list li {
@@ -48,7 +59,7 @@
 #todo-list li span {
     flex: 6 1 0;
     text-shadow: 1px 1px 10px rgb(32, 32, 32);
-    z-index: 1000;
+    word-break: break-all;
 }
 
 #todo-list li button {
