@@ -55,8 +55,18 @@ if (savedTodos !== null) {
     parsedTodos.forEach(paintTodo);
 }
 
-const chkBox = document.createElement("input");
-chkBox.type = "checkbox";
-
 const todoItems = todoList.childNodes;
-todoItems.forEach(item => console.log(item));
+
+todoItems.forEach(item => {
+    const chkBox = document.createElement("input");
+    chkBox.type = "checkbox";
+    chkBox.id = item.id + "chk";
+    // chkBox.classList.add(HIDDEN_CLASSNAME);
+
+    const label = document.createElement("label");
+    label.htmlFor = chkBox.id;
+
+    const thisItem = document.getElementById(item.id);
+    thisItem.appendChild(chkBox);
+    thisItem.appendChild(label);
+});

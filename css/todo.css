@@ -26,7 +26,6 @@
 #todo-form :first-child::placeholder {
     color: rgba(245, 245, 245, 0.8);
 }
-
 #todo-form :first-child:focus::placeholder {
     color: transparent;
     text-shadow: none;
@@ -41,11 +40,9 @@
     max-height: 18em;
     overflow-y: scroll;
 }
-
 #todo-list::-webkit-scrollbar {
     width: 5px;
 }
-
 #todo-list::-webkit-scrollbar-thumb {
     background: rgba(245, 245, 245, 0.4);
     border-radius: 15px;
@@ -54,14 +51,13 @@
 #todo-list li {
     display: flex;
     margin-top: 0.6em;
+    align-items: center;
 }
-
 #todo-list li span {
     flex: 6 1 0;
     text-shadow: 1px 1px 10px rgb(32, 32, 32);
     word-break: break-all;
 }
-
 #todo-list li button {
     flex: 1 1 0;
     padding: 0;
@@ -70,4 +66,12 @@
     color: whitesmoke;
     text-shadow: 1px 1px 10px rgb(32, 32, 32);
     cursor: pointer;
+}
+
+#todo-list li label {
+    position: absolute;
+    left: -10%;
+    border: 1px solid whitesmoke;
+    width: 0.5em;
+    height: 0.5em;
 }
