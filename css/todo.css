@@ -37,7 +37,7 @@
     padding: 0;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    max-height: 18em;
+    max-height: 14em;
     overflow-y: scroll;
 }
 #todo-list::-webkit-scrollbar {
@@ -54,12 +54,13 @@
     align-items: center;
 }
 #todo-list li span {
-    flex: 6 1 0;
+    flex: 10 0 0;
     text-shadow: 1px 1px 10px rgb(32, 32, 32);
     word-break: break-all;
+    cursor: pointer;
 }
 #todo-list li button {
-    flex: 1 1 0;
+    flex: 1 0 0;
     padding: 0;
     background-color: transparent;
     border: 0;
@@ -68,10 +69,7 @@
     cursor: pointer;
 }
 
-#todo-list li label {
-    position: absolute;
-    left: -10%;
-    border: 1px solid whitesmoke;
-    width: 0.5em;
-    height: 0.5em;
+.completed-todo {
+    text-decoration: line-through;
+    text-decoration-color: rgba(245, 245, 245, 0.7);
 }

@@ -45,6 +45,11 @@ function handleTodoSubmit(event) {
     saveTodos();
 }
 
+function check(event) {
+    const span = event.target.parentElement.querySelector("span");
+    span.classList.toggle("completed-todo");
+}
+
 todoForm.addEventListener(COMMON_EVENTS.SUBMIT, handleTodoSubmit);
 
 const savedTodos = localStorage.getItem(TODOS_KEY);
@@ -57,16 +62,4 @@ if (savedTodos !== null) {
 
 const todoItems = todoList.childNodes;
 
-todoItems.forEach(item => {
-    const chkBox = document.createElement("input");
-    chkBox.type = "checkbox";
-    chkBox.id = item.id + "chk";
-    // chkBox.classList.add(HIDDEN_CLASSNAME);
-
-    const label = document.createElement("label");
-    label.htmlFor = chkBox.id;
-
-    const thisItem = document.getElementById(item.id);
-    thisItem.appendChild(chkBox);
-    thisItem.appendChild(label);
-});
+todoItems.forEach(item => item.addEventListener(COMMON_EVENTS.CLICK, check));
