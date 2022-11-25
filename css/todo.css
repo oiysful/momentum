@@ -72,5 +72,5 @@
 .completed-todo {
     text-decoration: line-through;
     text-decoration-color: rgba(245, 245, 245, 0,7);
-    text-decoration-style: double;
+    opacity: 60%;
 }
