@@ -21,6 +21,7 @@ function paintTodo(newTodoObj) {
 
     const span = document.createElement("span");
     span.innerText = newTodoObj.text;
+    span.addEventListener(COMMON_EVENTS.CLICK, check);
 
     const button = document.createElement("button");
     button.innerText = "✖";
@@ -59,7 +60,3 @@ if (savedTodos !== null) {
     todos = parsedTodos;
     parsedTodos.forEach(paintTodo);
 }
-
-const todoItems = todoList.childNodes;
-
-todoItems.forEach(item => item.addEventListener(COMMON_EVENTS.CLICK, check));
