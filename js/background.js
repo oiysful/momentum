@@ -10,6 +10,10 @@ const images = [
     "8.jpg"
 ];
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+function backgroundImage() {
+    const chosenImage = images[Math.floor(Math.random() * images.length)];
+    
+    document.body.style.backgroundImage = `linear-gradient(rgba(20, 20, 20, 0.2), rgba(20, 20, 20, 0.2)),url('./img/${chosenImage}')`;
+}
 
-document.body.style.backgroundImage = `linear-gradient(rgba(20, 20, 20, 0.2), rgba(20, 20, 20, 0.2)), url('./img/${chosenImage}')`;
+backgroundImage();
