@@ -1,3 +1,6 @@
+const TODOS_KEY = "todos";
+const COMPLETED_TODO_CLASS = "completed-todo";
+
 const todoForm = document.getElementById("todo-form");
 const todoInput = todoForm.querySelector("input");
 const todoList = document.getElementById("todo-list");
@@ -21,6 +24,8 @@ function paintTodo(newTodoObj) {
 
     const span = document.createElement("span");
     span.innerText = newTodoObj.text;
+    if (newTodoObj.isChecked) span.classList.add(COMPLETED_TODO_CLASS);
+    else span.classList.remove(COMPLETED_TODO_CLASS);
     span.addEventListener(COMMON_EVENTS.CLICK, check);
 
     const button = document.createElement("button");
@@ -39,16 +44,24 @@ function handleTodoSubmit(event) {
     todoInput.value = "";
     const newTodoObj = {
         text: newTodo,
-        id: Date.now()
+        id: Date.now(),
+        isChecked: false
     }
     todos.push(newTodoObj);
     paintTodo(newTodoObj);
     saveTodos();
 }
 
+function handelTodoCheck(li) {
+    let fromTodos = JSON.parse(localStorage.getItem(TODOS_KEY));
+    fromTodos.forEach(todo =>  { if (todo.id === parseInt(li.id)) todo.isChecked = !todo.isChecked });
+    return fromTodos;
+}
+
 function check(event) {
-    const span = event.target.parentElement.querySelector("span");
-    span.classList.toggle("completed-todo");
+    todos = handelTodoCheck(event.target.parentElement);
+    event.target.classList.toggle(COMPLETED_TODO_CLASS);
+    saveTodos();
 }
 
 todoForm.addEventListener(COMMON_EVENTS.SUBMIT, handleTodoSubmit);

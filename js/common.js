@@ -13,4 +13,3 @@ const COMMON_EVENTS = {
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
-const TODOS_KEY = "todos";
